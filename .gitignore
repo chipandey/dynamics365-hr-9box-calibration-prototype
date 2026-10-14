@@ -1,0 +1,8 @@
+# Source product specifications are intentionally excluded from the public prototype.
+9-Box-Matrix-Requirements.md
+Dynamics-365-HR-Talent-Calibration-Requirements.md
+
+# Local editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db

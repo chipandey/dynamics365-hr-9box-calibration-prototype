@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dynamics 365 Human Resources 9-box Matrix and Talent Calibration prototype">
+  <title>Dynamics 365 HR | Talent Review Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button class="icon-button mobile-only" id="menuToggle" aria-label="Open navigation">☰</button>
+      <div class="product-mark" aria-label="Dynamics 365 Human Resources">
+        <span class="mark-shape"></span>
+        <span>Dynamics 365</span>
+      </div>
+      <div class="product-name">Human Resources</div>
+      <div class="topbar-spacer"></div>
+      <button class="walkthrough-launch" id="walkthroughLaunch">▶ Guided walkthrough</button>
+      <label class="persona-picker">
+        <span>View as</span>
+        <select id="personaSelect" aria-label="Select persona">
+          <option value="admin">HR / Talent administrator</option>
+          <option value="system-admin">System administrator</option>
+          <option value="hrbp">HR business partner</option>
+          <option value="manager">Line manager</option>
+          <option value="participant">Calibration participant</option>
+          <option value="facilitator">Calibration facilitator</option>
+          <option value="decision-maker">Calibration decision maker</option>
+          <option value="approver">Executive approver</option>
+          <option value="employee">Employee</option>
+          <option value="analytics">People analytics user</option>
+          <option value="auditor">Auditor</option>
+        </select>
+      </label>
+      <button class="icon-button" aria-label="Notifications">◔<span class="notification-dot"></span></button>
+      <div class="avatar" title="Avery Morgan">AM</div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="area-switcher">
+          <span class="area-icon">HR</span>
+          <div>
+            <small>Area</small>
+            <strong>Talent management</strong>
+          </div>
+        </div>
+        <nav id="mainNav" aria-label="Main navigation"></nav>
+        <div class="sidebar-footer">
+          <span class="prototype-pill">Interactive prototype</span>
+          <small>Data is illustrative</small>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <div class="commandbar" id="commandbar"></div>
+        <div class="page" id="page" tabindex="-1"></div>
+      </main>
+    </div>
+
+    <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+    <div class="modal-backdrop hidden" id="modalBackdrop">
+      <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></section>
+    </div>
+    <aside class="walkthrough-panel hidden" id="walkthroughPanel" aria-label="Guided walkthrough">
+      <div class="walkthrough-header">
+        <div>
+          <small>End-to-end guide</small>
+          <h2>Talent review journey</h2>
+        </div>
+        <button class="icon-button" id="walkthroughClose" aria-label="Close walkthrough">×</button>
+      </div>
+      <div class="walkthrough-progress"><span id="walkthroughProgress"></span></div>
+      <div class="walkthrough-body" id="walkthroughBody"></div>
+      <div class="walkthrough-actions">
+        <button class="button secondary" id="walkthroughPrev">Back</button>
+        <button class="button primary" id="walkthroughNext">Next</button>
+      </div>
+    </aside>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
