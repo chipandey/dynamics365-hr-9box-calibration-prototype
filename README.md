@@ -14,6 +14,9 @@ python -m http.server 8080
 
 Then open `http://localhost:8080`.
 
+https://chipandey.github.io/dynamics365-hr-9box-calibration-prototype/
+
+
 ## What the prototype demonstrates
 
 The prototype covers one connected business lifecycle:
